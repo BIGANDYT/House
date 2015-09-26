@@ -4,13 +4,13 @@
   <groupId>com.andythompson</groupId>
   <artifactId>HouseTest</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>HouseTest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>js</sonar.language>
-	<sonar.exclusions>assets/js/plugins/**</sonar.exclusions>
+	<sonar.exclusions>assets/js/plugins/jquery-knob/*.js</sonar.exclusions>
 	<sonar.host.url>http://sitecoreci.cloudapp.net:9000</sonar.host.url>
 	<sonar.jdbc.url>jdbc:jtds:sqlserver://sitecoreci.cloudapp.net:1433/Sonar;SelectMethod=Cursor</sonar.jdbc.url>
 	<sonar.jdbc.username>sa</sonar.jdbc.username>
