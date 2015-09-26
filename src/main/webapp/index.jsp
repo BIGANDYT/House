@@ -18,7 +18,7 @@ Jquery knob https://github.com/aterrien/jQuery-Knob
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery-knob/jquery.knob.min.js"></script>
+    <script src="assets/js/plugins/jquery-knob/jquery.knob.min.js"></script>
     <script src="assets/js/house.js"></script>
 </body>
 </html>

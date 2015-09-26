@@ -10,6 +10,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>js</sonar.language>
+	<sonar.exclusions>assets/js/plugins/**</sonar.exclusions>
 	<sonar.host.url>http://sitecoreci.cloudapp.net:9000</sonar.host.url>
 	<sonar.jdbc.url>jdbc:jtds:sqlserver://sitecoreci.cloudapp.net:1433/Sonar;SelectMethod=Cursor</sonar.jdbc.url>
 	<sonar.jdbc.username>sa</sonar.jdbc.username>
