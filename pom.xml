@@ -22,6 +22,3 @@
     <finalName>HouseTest</finalName>
   </build>
 </project>
-<!--To run using maven: mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run-->
-<!--To run analysis using sonar & maven: mvn clean sonar:sonar-->
-<!-- TODO: add comments -->
