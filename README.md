@@ -48,7 +48,7 @@ The app uses maven to build, run and run code analysis.
 
 ## Links
 
-* [SonarQube Source analysis](http://sitecoreci.cloudapp.net:9000/dashboard/index/3170/)
+* [SonarQube Source analysis](http://sitecoreci.cloudapp.net:9000/dashboard/index/3170)
 * [BuildServer](http://sitecoreci.cloudapp.net:8075/project.html?projectId=House&tab=projectOverview/)
 * [Zip Distribution - All you need to run](https://www.dropbox.com/s/gdtqtfyahbhrbt8/Test.zip?dl=0)
 
