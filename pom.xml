@@ -4,7 +4,7 @@
   <groupId>com.andythompson</groupId>
   <artifactId>HouseTest</artifactId>
   <packaging>war</packaging>
-  <version>1.1</version>
+  <version>1.2</version>
   <name>HouseTest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -17,12 +17,6 @@
 	<sonar.jdbc.password>10Philpot</sonar.jdbc.password>
   </properties>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
   <build>
     <finalName>HouseTest</finalName>

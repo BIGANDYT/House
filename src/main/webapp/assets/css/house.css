@@ -1,3 +1,15 @@
-        body {
-            background: rgb(70, 72, 75);
-        }     
+body {
+    background: rgb(70, 72, 75);
+}   
+  
+.app {
+    width: 150px;
+    height: 150px;            
+    cursor: move;
+    z-index: 800;
+}
+
+.app2 {
+    width: 150px;
+    height: 150px;           
+}

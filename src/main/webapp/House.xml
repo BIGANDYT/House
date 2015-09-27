@@ -6,6 +6,10 @@
 		<min>0</min>
 		<max>100</max>
 		<cssFile>lightbulb.css</cssFile>
+		<image>assets/img/lightbulb.png</image>
+		<controlwidth>150</controlwidth>
+		<controlheight>150</controlheight>
+		<controlcolor>#66CC66</controlcolor>
     </app>
 	<app>
 		<title>sonos</title>
@@ -13,6 +17,10 @@
 		<min>0</min>
 		<max>100</max>
 		<cssFile>sonos.css</cssFile>
-		<audio>assets/mp3/track1.mp3</audio>
+		<image>assets/img/sonos.png</image>
+		<audio>assets/mp3/aem.mp3</audio>
+		<controlwidth>200</controlwidth>
+		<controlheight>200</controlheight>
+		<controlcolor>#E32636</controlcolor>
     </app>
 </house>
