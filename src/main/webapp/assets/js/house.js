@@ -25,10 +25,10 @@ function addApp($app) {
     var audio = $('audio', $app).text();
     // add the app to the page
     $("#apps").append("<div class=\"col-xs-12\">");
-    $("#apps").append("<div class=\"app\" style=\"background: url(" + image + ") no-repeat -150px 0;\"><div id=\"" + title  + "\" class=\"app2\" style=\"background: url(" + image + ") no-repeat 0 0;\"> </div></div>");
+    $("#apps").append("<div class=\"app pull-right\" style=\"background: url(" + image + ") no-repeat -150px 0;\"><div id=\"" + title  + "\" class=\"app2\" style=\"background: url(" + image + ") no-repeat 0 0;\"> </div></div>");
     // if we have an audio file then add a html5 player to the page aswell
     if (audio.length) {
-        $("#apps").append("<div><audio id=\"player-" + title + "\" controls><source src=\"" + audio + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio></div>");
+        $("#apps").append("<div class=\"pull-right\"><audio id=\"player-" + title + "\" controls><source src=\"" + audio + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio></div>");
     }
     // now add the apps control
     addControl($app);

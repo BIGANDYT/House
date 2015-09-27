@@ -1,5 +1,9 @@
 body {
     background: rgb(70, 72, 75);
+	background-image: url('../../assets/img/acc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
 }   
   
 .app {
