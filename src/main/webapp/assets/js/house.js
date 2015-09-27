@@ -8,17 +8,7 @@ $(document).ready(function() {
     $.get('House.xml', function(d) {
 		// for each app in the xml definition loop through, retrieve the metadata and add an app to the page
         $(d).find("app").each(function() {
-            var $app = $(this);
-            var title = $('title', $app).text();
-            var value = $('value', $app).text();
-            var min = $('min', $app).text();
-            var max = $('max', $app).text();
-            var image = $('image', $app).text();
-			var audio = $('audio', $app).text();
-			var controlwidth = $('controlwidth', $app).text();
-			var controlheight = $('controlheight', $app).text();
-			var controlcolor = $('controlcolor', $app).text();
-            addApp(title, value, min, max, image, audio, controlwidth, controlheight, controlcolor);
+            addApp($(this));
         });
     });
 });
@@ -28,26 +18,21 @@ $(document).ready(function() {
  *
  * @class addApp
  * @constructor
- * @param {string} title - The title of the control.
- * @param {string} value - The author of the book.
- * @param {string} min - The minimum value that can be set by the control.
- * @param {string} max - The maximum value that can be set by the control.
- * @param {string} image - corresponding image file required by the app.
- * @param {string} audio - corresponding audio file required by the app.
- * @param {string} controlwidth - The width of the control.
- * @param {string} controlheight - The height of the control.
- * @param {string} controlcolor - The colour of the control.
+ * @param {string} app - The app object.
  */
-function addApp(title, value, min, max, image, audio, controlwidth, controlheight, controlcolor) {	
+function addApp($app) {	
+	var title = $('title', $app).text();
+	var image = $('image', $app).text();
+	var audio = $('audio', $app).text();
 	// add the app to the page
     $("#apps").append("<div class=\"col-xs-12\">");
-    $("#apps").append("<div class=\"app\" style=\"background: url(" + image + ") no-repeat -150px 0;\"><div id=\"" + title + "\" class=\"app2\" style=\"background: url(" + image + ") no-repeat 0 0;\"> </div></div>");
+    $("#apps").append("<div class=\"app\" style=\"background: url(" + image + ") no-repeat -150px 0;\"><div id=\"" + title	+ "\" class=\"app2\" style=\"background: url(" + image + ") no-repeat 0 0;\"> </div></div>");
     // if we have an audio file then add a html5 player to the page aswell
 	if (audio.length) {
         $("#apps").append("<div><audio id=\"player-" + title + "\" controls><source src=\"" + audio + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio></div>");
     }
 	// now add the apps control
-    addControl(title, value, min, max, controlwidth, controlheight, controlcolor);
+    addControl($app);
 }
 
 /**
@@ -55,15 +40,16 @@ function addApp(title, value, min, max, image, audio, controlwidth, controlheigh
  *
  * @class addControl
  * @constructor
- * @param {string} title - The title of the control.
- * @param {string} value - The author of the book.
- * @param {string} min - The minimum value that can be set by the control.
- * @param {string} max - The maximum value that can be set by the control.
- * @param {string} controlwidth - The width of the control.
- * @param {string} controlheight - The height of the control.
- * @param {string} controlcolor - The colour of the control.
+ * @param {string} app - The app object.
  */
-function addControl(title, value, min, max, controlwidth, controlheight, controlcolor) {
+function addControl($app) {
+	var title = $('title', $app).text();
+	var value = $('value', $app).text();
+	var controlwidth = $('controlwidth', $app).text();
+	var controlheight = $('controlheight', $app).text();
+	var controlcolor = $('controlcolor', $app).text();
+	var min = $('min', $app).text();
+	var max = $('max', $app).text();
 	// add the input form tag to the page that will be used by the jquery-knob jquery plugin control
     $("#controls").append("<div class=\"col-xs-12\"><input id=\"control-" + title + "\" type=\"text\" value=\"0\" data-width=\"" + controlwidth + "\" data-height=\"" + controlheight + "\"></div>");
     // initialise the control
